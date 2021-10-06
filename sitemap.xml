@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://mrzhu.tech/2021/10/06/hello-world/</loc>
+    
+    <lastmod>2021-10-06T15:25:22.510Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://mrzhu.tech/2021/10/06/ce-shi-wen-zhang/</loc>
     
-    <lastmod>2021-10-06T11:37:55.102Z</lastmod>
+    <lastmod>2021-10-06T15:23:43.260Z</lastmod>
     
   </url>
   
@@ -61,13 +68,6 @@
     <loc>https://mrzhu.tech/404.html</loc>
     
     <lastmod>2021-10-06T07:32:55.256Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://mrzhu.tech/2021/10/06/hello-world/</loc>
-    
-    <lastmod>2021-10-06T07:24:15.803Z</lastmod>
     
   </url>
   
