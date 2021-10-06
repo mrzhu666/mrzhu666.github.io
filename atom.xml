@@ -5,9 +5,9 @@
   <subtitle>MrZhu</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://godweiyang.com/"/>
+  <link href="https://mrzhu.tech/"/>
   <updated>2021-10-06T07:24:15.803Z</updated>
-  <id>https://godweiyang.com/</id>
+  <id>https://mrzhu.tech/</id>
   
   <author>
     <name>MrZhu</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="https://godweiyang.com/2021/10/06/hello-world/"/>
-    <id>https://godweiyang.com/2021/10/06/hello-world/</id>
+    <link href="https://mrzhu.tech/2021/10/06/hello-world/"/>
+    <id>https://mrzhu.tech/2021/10/06/hello-world/</id>
     <published>2021-10-06T07:24:15.803Z</published>
     <updated>2021-10-06T07:24:15.803Z</updated>
     
@@ -40,8 +40,8 @@
   
   <entry>
     <title>测试文章</title>
-    <link href="https://godweiyang.com/2021/10/06/ce-shi-wen-zhang/"/>
-    <id>https://godweiyang.com/2021/10/06/ce-shi-wen-zhang/</id>
+    <link href="https://mrzhu.tech/2021/10/06/ce-shi-wen-zhang/"/>
+    <id>https://mrzhu.tech/2021/10/06/ce-shi-wen-zhang/</id>
     <published>2021-10-05T16:00:00.000Z</published>
     <updated>2021-10-06T11:37:55.102Z</updated>
     
@@ -57,17 +57,17 @@
     
     </summary>
     
-      <category term="随笔" scheme="https://godweiyang.com/categories/%E9%9A%8F%E7%AC%94/"/>
+      <category term="随笔" scheme="https://mrzhu.tech/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
-      <category term="博客" scheme="https://godweiyang.com/tags/%E5%8D%9A%E5%AE%A2/"/>
+      <category term="博客" scheme="https://mrzhu.tech/tags/%E5%8D%9A%E5%AE%A2/"/>
     
   </entry>
   
   <entry>
     <title>5W2H | 关于写博客的七点反思</title>
-    <link href="https://godweiyang.com/2020/01/14/5w2h-godweiyang/"/>
-    <id>https://godweiyang.com/2020/01/14/5w2h-godweiyang/</id>
+    <link href="https://mrzhu.tech/2020/01/14/5w2h-godweiyang/"/>
+    <id>https://mrzhu.tech/2020/01/14/5w2h-godweiyang/</id>
     <published>2020-01-14T07:27:31.000Z</published>
     <updated>2021-10-06T11:24:02.343Z</updated>
     
@@ -87,10 +87,10 @@
     
     </summary>
     
-      <category term="随笔" scheme="https://godweiyang.com/categories/%E9%9A%8F%E7%AC%94/"/>
+      <category term="随笔" scheme="https://mrzhu.tech/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
-      <category term="博客" scheme="https://godweiyang.com/tags/%E5%8D%9A%E5%AE%A2/"/>
+      <category term="博客" scheme="https://mrzhu.tech/tags/%E5%8D%9A%E5%AE%A2/"/>
     
   </entry>
   
