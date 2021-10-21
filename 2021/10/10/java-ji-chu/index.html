@@ -332,7 +332,7 @@ libraries">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -487,14 +487,14 @@ libraries">
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    13.1k
+                    11.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    46 分
+                    41 分
                 </div>
                 
                 
@@ -665,7 +665,7 @@ ATypeName a <span class="token operator">=</span> <span class="token keyword">ne
 <p>每个被重载的方法必须有独一无二的参数列，包括顺序</p>
 <p>基本类型可以自动从较小的类型转型为较大的类型。如果传入的参数类型大于方法期望接收的参数类型，你必须首先做下转换。如果不做的话，编译器就会报错。</p>
 <p><strong>无参构造器</strong></p>
-<p>如果你创建一个类，类中没有构造器，那么编译器就会自动为你创建一个无参构<br>造器。</p>
+<p>如果你创建一个类，类中没有构造器，那么编译器就会自动为你创建一个无参构造器。</p>
 <p><strong>this 关键字</strong></p>
 <p>对象引用是被秘密地传达给编译器——并不在参数列表中。this 关键字只能在非静态方法内部使用。可以用this调用方法但是没必要。</p>
 <p>this 关键字只用在一些必须显式使用当前对象引用的特殊场合。例如，</p>
@@ -703,8 +703,8 @@ ATypeName a <span class="token operator">=</span> <span class="token keyword">ne
 <p><strong>构造器初始化</strong></p>
 <p>自动初始化会在构造器被调用之前发生（例如基本基本类型的初值）。</p>
 <h3 id="静态"><a href="#静态" class="headerlink" title="静态"></a>静态</h3><p><strong>静态数据的初始化</strong></p>
-<p>​        无论创建多少个对象，静态数据都只占用一份存储区域。static 关键字不能应用于局部变量，所以只能作用于属性（字段、域）。如果一个字段是静态的基本类型，没有初始化它，它就会获得基本类型的标准初值。如果是对象引用，那么它的默认初值就是null。</p>
-<p>​        初始化的顺序先是静态对象（如果它们之前没有被初始化的话），然后是非静态对象，之后时运行构造器。静态初始化只会在首次加载Class对象时初始化一次。（或调用静态成员？）</p>
+<p>无论创建多少个对象，静态数据都只占用一份存储区域。static 关键字不能应用于局部变量，所以只能作用于属性（字段、域）。如果一个字段是静态的基本类型，没有初始化它，它就会获得基本类型的标准初值。如果是对象引用，那么它的默认初值就是null。</p>
+<p>初始化的顺序先是静态对象（如果它们之前没有被初始化的话），然后是非静态对象，之后时运行构造器。静态初始化只会在首次加载Class对象或调用静态成员时初始化一次。</p>
 <p><strong>显式的静态初始化</strong></p>
 <p>特殊的“静态子句”（有时叫做静态块）</p>
 <pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Spoon</span> <span class="token punctuation">{</span>
@@ -749,26 +749,9 @@ Integer<span class="token punctuation">[</span><span class="token punctuation">]
 Spiciness howHot <span class="token operator">=</span> Spiciness<span class="token punctuation">.</span>MEDIUM<span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">// 使用方法</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <p>方法 <code>toString()</code>打印实例名称，<code>ordinal()</code>表示某常量的顺序，<code>values()</code>按照顺序创造常量字符串数组。</p>
 <h2 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h2><p>访问修饰符（access specifier），访问控制权限的等级，从“最大权限” 到“最小权限” 依次是：public，protected，包访问权限（package access）（没有关键字）和private。Java 中通过package 关键字控制类库组件，类在相同包下还是在不同包下，会影响访问修饰符</p>
-<h3 id="包的概念"><a href="#包的概念" class="headerlink" title="包的概念"></a>包的概念</h3><p>包内包含一组类，它们被组织在一个单独的命名空间（namespace）下。一个命名空间既是一个包或类库。</p>
-<p>例如，标准Java 发布中有一个工具库，它被组织在java.util 命名空间下。java.util 中含有一个类，叫做ArrayList。使用ArrayList 的一种方式是用其全名java.util.ArrayList。另一种方法是通过import导入 <code>import java.util.ArrayList;</code>或 <code>import java.util.*;</code></p>
-<p>一个Java 源代码文件称为一个编译单元（compilation unit）（也称翻译单元（translation unit））。每个编译单元的文件名后缀必须是.java。在编译单元中可以有一个public 类，它的类名必须与文件名相同（包括大小写，但不包括后缀名.java）。</p>
-<p>每个编译单元中只能有一个public 类，否则编译器不接受。如果这个编译单元中还有其他类，那么在包之外是无法访问到这些类的，因为它们不是public 类，此时它们为主public 类提供“支持” 类。</p>
-<p>在同一命名空间（包）下，public类或非public类都可以互相使用。</p>
-<p><strong>代码组织</strong></p>
-<p>当编译一个.java 文件时，.java 文件的每个类都会有一个输出文件。每个输出的文件名和.java 文件中每个类的类名相同，只是后缀名是.class。因此，在编译少量的.java 文件后，会得到大量的.class 文件。</p>
-<p>在Java 中，可运行程序是一组.class 文件，它们可以打包压缩成一个Java文档文件（JAR，使用jar 文档生成器）。Java 解释器负责查找、加载和解释这些文件。</p>
-<p>类库是一组类文件。每个源文件通常都含有一个public 类和任意数量的非public类，因此每个文件都有一个public 组件。如果把这些组件集中在一起，就需要使用关键字package。</p>
-<p>如果你使用了package 语句，它必须是文件中除了注释之外的第一行代码。</p>
-<p>（注意，Java 包名按惯例一律小写，即使中间的单词也需要小写，与驼峰命名不同）</p>
+<h3 id="包的概念"><a href="#包的概念" class="headerlink" title="包的概念"></a>包的概念</h3><p><strong>代码组织</strong></p>
 <p><strong>创建独一无二的包名</strong></p>
-<p>按照惯例，package 名称是类的创建者的反顺序的Interne域名。如果你遵循惯例，因为Internet 域名是独一无二的，所以你的package 名称也应该是独一无二的，不会发生名称冲突。如果你没有自己的域名，你就得构造一组不大可能与他人重复的组合（比如你的姓名），来创建独一无二的package 名称。</p>
-<p>把package 名称分解成你机器上的一个目录，所以当Java解释器必须要加载一个.class 文件时，它能定位到.class 文件所在的位置。首先，它找出环境变量CLASSPATH（通过操作系统设置，有时也能通过Java 的安装程序或基于Java 的工具设置，win10下是Path环境变量？）。CLASSPATH 包含一个或多个目录，用作查找.class 文件的根目录。从根目录开始，Java 解释器获取包名并将每个句点替换成反斜杠，生成一个基于根目录的路径名（取决于你的操作系统，包名foo.bar.baz 变成foo\bar\baz 或foo/bar/baz 或其它）。然后这个路径与CLASSPATH 的不同项连接，解释器就在这些目录中查找与你所创建的类名称相关的.class 文件（解释器还会查找某些涉及Java解释器所在位置的标准目录）。</p>
-<p>但是在使用JAR 文件时，有点不一样。你必须在类路径写清楚JAR 文件的实际名称（包括后缀.jar），不能仅仅是JAR 文件所在的目录。</p>
-<p><strong>冲突</strong></p>
-<p>若使用了有冲突的名字，必须明确指明全名</p>
-<p>这个文件的位置一定是在某个以一个CLASSPATH 位置开始，然后接着是onjava<br>的目录下。编译完之后，就可以在系统的任何地方使用import onjava 语句来使用这<br>些方法了。</p>
 <p><strong>包的使用</strong></p>
-<p>注意，编译过的代码通常位于与源代码的不同目录中。这是很多工程的标准，而且<br>集成开发环境（IDE）通常会自动为我们做这些。必须保证JVM 通过CLASSPATH 能<br>找到编译后的代码。</p>
 <h3 id="访问权限修饰符"><a href="#访问权限修饰符" class="headerlink" title="访问权限修饰符"></a>访问权限修饰符</h3><p>public，protected 和private。</p>
 <p>不提供访问修饰符（默认访问权限（default access））。默认访问权限没有关键字，通常被称为包访问权限（packageaccess）（有时也称为friendly），当前包中的所有其他类都可以访问那个成员。</p>
 <p><strong>public</strong></p>
@@ -924,22 +907,34 @@ sub.field = 1, sub.getField() = 1, sub.getSuperField()= 0
 <p>由于向上转型（在继承层次中向上移动）会丢失具体的类型信息，那么为了重新获取类型信息，就需要在继承层次中向下移动，使用向下转型。</p>
 <p>在某些语言中（如C++），必须执行一个特殊的操作来获得安全的向下转型，但是在Java 中，每次转型都会被检查！即使只是进行一次普通的加括号形式的类型转换。如果不是，就会得到ClassCastException （类转型异常）。</p>
 <p>必须是向上转型后，对应地向下转型才可调用派生扩展的接口方法。</p>
-<h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2><h3 id="抽象类和方法"><a href="#抽象类和方法" class="headerlink" title="抽象类和方法"></a>抽象类和方法</h3><p>Java 提供了一个叫做抽象方法的机制，这个方法是不完整的：它只有声明没有方法体。</p>
-<p>抽象方法：<code>abstract void f();</code></p>
-<p>包含抽象方法的类叫做抽象类。如果一个类包含一个或多个抽象方法，那么类本身也必须限定为抽象的，否则，编译器会报错。</p>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">Basic</span> <span class="token punctuation">{</span>
+<h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2><h3 id="抽象类和方法"><a href="#抽象类和方法" class="headerlink" title="抽象类和方法"></a>抽象类和方法</h3><pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">Basic</span> <span class="token punctuation">{</span>
     <span class="token keyword">abstract</span> <span class="token keyword">void</span> <span class="token function">unimplemented</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">void</span> <span class="token function">f</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<p>当试图创建这个类的对象时，只会得到编译器的错误信息。</p>
-<p>如果创建一个继承抽象类的新类并为之创建对象，那么就必须为基类的所有抽象方法提供方法定义。如果不这么做（可以选择不做），新类仍然是一个抽象类，编译器会强制我们为新类加上abstract 关键字。</p>
-<p>为了创建可初始化的类，就要继承抽象类，并提供所有抽象方法的定义。</p>
-<p>留意@Override 的使用。没有这个注解的话，如果你没有定义相同的方法名或签名，抽象机制会认为你没有实现抽象方法从而产生编译时错误。</p>
-<p>抽象接口只允许public 方法，如果不加访问修饰符的话，接口的方法不是friendly 而是public。<code>protected abstract</code>可用，但<code>private abstract</code>禁止。</p>
-<p>创建抽象类和抽象方法是有帮助的，因为它们使得类的抽象性很明确，并能告知用户和编译器使用意图。抽象类同时也是一种有用的重构工具，使用它们使得我们很容易地将沿着继承层级结构上移公共方法。</p>
-<h3 id="接口创建"><a href="#接口创建" class="headerlink" title="接口创建"></a>接口创建</h3><p>interface关键字产生一个完全抽象的类，没有提供任何实现。即只能决定方法名、参数列表和返回类型，但是无法确定方法体。</p>
-<p>接口被用来建立类之间的协议。（一些面向对象编程语言中，使用protocol 关键字完成相同的功能）</p>
-<p>接口与抽象类最明显的区别可能就是使用上的惯用方式。接口的典型使用是代表一个类的类型或一个形容词，如Runnable 或Serializable。而抽象类通常是类层次结构的一部分或一件事物的类型，如String 或ActionHero。</p>
+<h3 id="接口创建"><a href="#接口创建" class="headerlink" title="接口创建"></a>接口创建</h3><pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">PureInterface</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> <span class="token function">m1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">void</span> <span class="token function">m2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">double</span> <span class="token function">m3</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>默认方法</strong></p>
+<p><strong>多继承</strong></p>
+<p><strong>接口中的静态方法</strong></p>
+<h3 id="抽象类和接口"><a href="#抽象类和接口" class="headerlink" title="抽象类和接口"></a>抽象类和接口</h3><img src=".assets/java基础/image-20211010223215019.png" alt="image-20211010223215019" style="zoom: 50%;">
+
+<p>有一条实际经验：尽可能地抽象</p>
+<h2 id="内部类"><a href="#内部类" class="headerlink" title="内部类"></a>内部类</h2><h3 id="创建内部类"><a href="#创建内部类" class="headerlink" title="创建内部类"></a>创建内部类</h3><h3 id="链接外部类"><a href="#链接外部类" class="headerlink" title="链接外部类"></a>链接外部类</h3><h3 id="this和-new"><a href="#this和-new" class="headerlink" title=".this和.new"></a>.this和.new</h3><h2 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h2><h3 id="泛型和类型安全的集合"><a href="#泛型和类型安全的集合" class="headerlink" title="泛型和类型安全的集合"></a>泛型和类型安全的集合</h3><pre class="line-numbers language-java"><code class="language-java">ArrayList<span class="token operator">&lt;</span>Apple<span class="token operator">></span> apples <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token operator">&lt;</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 指定了这个集合实例可以保存的类型Apple</span>
+ArrayList<span class="token operator">&lt;</span>Apple<span class="token operator">></span> apples <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token operator">&lt;</span>Apple<span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// Java7 之前</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">// 向上转型</span>
+List<span class="token operator">&lt;</span>Apple<span class="token operator">></span> apples <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token operator">&lt;</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+List<span class="token operator">&lt;</span>Apple<span class="token operator">></span> apples <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">LinkedList</span><span class="token operator">&lt;</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h3 id="添加元素组"><a href="#添加元素组" class="headerlink" title="添加元素组"></a>添加元素组</h3><p><code>Arrays.asList()</code>和<code>Collections.addAll()</code>接收数组和逗号分隔的列表，可以向上转型</p>
+<pre class="line-numbers language-Java"><code class="language-Java">Collection<Integer> collection =new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5));
+Integer[] moreInts = { 6, 7, 8, 9, 10 };
+collection.addAll(Arrays.asList(moreInts));
+Collections.addAll(collection, 11, 12, 13, 14, 15);
+Collections.addAll(collection, moreInts);
+List<Integer> list = Arrays.asList(16,17,18,19,20);
+list.set(1, 99); // OK -- modify an element<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
             </div>
             <hr />
@@ -1433,7 +1428,7 @@ sub.field = 1, sub.getField() = 1, sub.getSuperField()= 0
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="Java笔记">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="Java笔记">
                         
                         <span class="card-title">Java笔记</span>
                     </div>
@@ -1486,7 +1481,7 @@ libraries
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="测试文章">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="测试文章">
                         
                         <span class="card-title">测试文章</span>
                     </div>
@@ -1692,7 +1687,7 @@ libraries
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">16.9k</span>
+            <span class="white-color">15.4k</span>
             
 
             <br>
